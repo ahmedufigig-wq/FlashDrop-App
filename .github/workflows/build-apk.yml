@@ -1,4 +1,5 @@
 name: Build FlashDrop APK
+# Rebuild trigger after Android SDK workflow fix
 
 on:
   push:
