@@ -1,5 +1,4 @@
 name: Build FlashDrop APK
-# Rebuild trigger after Android SDK workflow fix
 
 on:
   push:
@@ -31,8 +30,7 @@ jobs:
           test -d "$ANDROID_HOME"
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
-        working-directory: .
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         if: success()
